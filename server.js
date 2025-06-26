@@ -1,4 +1,5 @@
 const path = require("path");
+const port = 10000;
 
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
@@ -630,8 +631,8 @@ fastify.post('/', (request, reply) => {
 
 //------------------------------------------------------------------------------
 // Run the server and report out to the logs
-fastify.listen(process.env.PORT, (err, address) => {
-  console.log(`process.env.PORT = ${process.env.PORT}`);
+console.log(`port = ${port}`);
+fastify.listen(port, (err, address) => {
 
   if(err) {
     fastify.log.error(err);
