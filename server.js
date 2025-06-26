@@ -1,5 +1,5 @@
 const path = require("path");
-const port = 10000;
+const port = process.env.PORT || 10000;
 
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
@@ -576,6 +576,12 @@ fastify.get('/game', (request, reply) => {
 fastify.get('/about', (request, reply) => {
   reply.view('src/pages/about.hbs', {});
 });
+
+//------------------------------------------------------------------------------
+//Serves images from the images directory.
+/*fastify.get(`/images/*`, (request, reply) => {
+	return "image";// reply.sendFile(request.url);
+});*/
 
 //------------------------------------------------------------------------------
 //We use POST to allow people to host a game.
