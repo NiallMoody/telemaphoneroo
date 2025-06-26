@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Telemaphoneroo</title>
+
+    <link rel="stylesheet" href="/style.css" />  
+    <link rel="icon" type="image/png" href="https://cdn.glitch.com/639fce1b-57d3-4675-8e3a-cb10087ab54e%2Ffavicon.png?v=1623430902268">
+  </head>
+
+  <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+  <script type="module" src="/settings-buttons.js"></script>
+
+  <body>
+    <div class="main">
+      <div id="headerDiv">
+        <h1>Telemaphoneroo</h1>
+
+        <div id="settingsDiv">
+          <button class="settingsButton" id="darkModeButton" aria-label="dark mode" title="Switch to dark mode">
+            🌞
+          </button>
+
+          <button class="settingsButton" id="muteText2Speech" aria-label="mute text-to-speech" title="Mute game speech">
+            🔊
+          </button>
+        </div>
+      </div>
+      
+      <ul>
+        <li class="aboutText"><a class="aboutLink" href="#about-the-game">About the game</a></li>
+        <li class="aboutText"><a class="aboutLink" href="#game-rules">Game rules</a></li>
+        <li class="aboutText"><a class="aboutLink" href="#some-fun-custom-rules">Some fun custom rules</a></li>
+        <li class="aboutText"><a class="aboutLink" href="#the-license">The license</a></li>
+        <li class="aboutText"><a class="aboutLink" href="#why-this-license">Why this license?</a></li>
+        <li class="aboutText"><a class="aboutLink" href="#thanks">Thanks</a></li>
+        <li class="aboutText"><a class="aboutLink" href="#infrastructure-credits">Infrastructure credits</a></li>
+      </ul>
+
+      <h2 id="about-the-game">About the game</h2>
+      
+      <p class="aboutText">
+        Telemaphoneroo is an online
+        <a class="aboutLink" href="https://icebreakerideas.com/telephone-game/">telephone
+        game</a>.
+      </p>
+      
+      <p class="aboutText">
+        To host a game of Telemaphoneroo go to
+        <a class="aboutLink" href="https://telemaphoneroo.glitch.me/">telemaphoneroo.glitch.me</a>,
+        enter your name (you can choose any name you like!), and click
+        <span class="highlightText">Host game</span>. On hosting a game,
+        telemaphoneroo will give you a URL that you can send to your friends to
+        invite them to play with you.
+      </p>
+      
+      <h2 id="game-rules">Game rules</h2>
+      
+      <p class="aboutText">
+        By default, the game asks players to first enter a 2-word phrase, then
+        on subsequent turns they are asked to add a syllable to phrases entered
+        by the other players. As the game progresses, the initial phrases become
+        more and more unrecognisable (for instance,
+        <span class="highlightText">telephone game</span> might become
+        <span class="highlightText">telemaphoneroo gamabarane</span>).
+      </p>
+      
+      <p class="aboutText">
+        Custom settings also allow the person hosting the game to define their
+        own prompts or game rules. This makes it possible to create a variety of
+        different games using the same basic format. It turns out there's a
+        lot you can do with the telephone game format!
+      </p>
+      
+      <h2 id="some-fun-custom-rules">Some fun custom rules:</h2>
+      
+      <table>
+        <tr class="tableHeader">
+          <th class="firstColumn">First prompt</th>
+          <th>Subsequent prompts</th>
+        </tr>
+        
+        <tr>
+          <td class="firstColumn">Enter a noun</td>
+          <td>
+            Enter an adjective before the noun<br/>
+            <br/>
+            Credit: <a href="https://twitter.com/DouglasFlinders">@DouglasFlinders</a>
+          </td>  
+        </tr>
+        
+        <tr>
+          <td class="firstColumn">
+            Enter an object + "of"<br/>
+            <br/>
+            e.g. "hat of"</td>
+          <td>
+            Add a noun or verb either side of the "of"<br/>
+            <br/>
+            Credit: <a href="https://twitter.com/_kaymay">@_kaymay</a>
+          </td>  
+        </tr>
+        
+        <tr>
+          <td class="firstColumn">Enter an emoji</td>
+          <td>
+            Add another emoji
+          </td>  
+        </tr>
+        
+        <tr>
+          <td class="firstColumn">Enter a word</td>
+          <td>
+            Add a word that rhymes with the last word
+          </td>  
+        </tr>
+        
+        <tr>
+          <td class="firstColumn">Give us a beat!</td>
+          <td>
+            Keep the beat going!
+          </td>  
+        </tr>
+      </table>
+
+      <h2 id="the-license">The license</h2>
+      
+      <p class="aboutText">
+        Telemaphoneroo was created by <a class="aboutLink" href="https://www.niallmoody.com/">Niall
+        Moody</a>.
+      </p>
+      
+      <p class="aboutText">
+        The game and its source code is released under the
+        <span class="highlightText">Anti-Capitalist Software License</span>. You
+        can read the full text of the license and its rationale
+        <a class="aboutLink" href="https://anticapitalist.software/">here</a>,
+        but if you're looking for a summary, the important part is:
+      </p>
+      
+      <code>
+        This is anti-capitalist software, released for free use by individuals
+        and organizations that do not operate by capitalist principles.
+      </code>
+      
+      <p class="aboutText">
+        You can view the game's source code on
+        <a class="aboutLink" href="https://glitch.com/edit/#!/telemaphoneroo">glitch.com</a>.
+        As long as you abide by the license you are free to remix the game in any
+        way you want.
+      </p>
+      
+      <h2 id="why-this-license">Why this license?</h2>
+      
+      <p class="aboutText">
+        The <a class="aboutLink" href="https://anticapitalist.software/">ACSL
+        page</a> lists a number of very good reasons you might want to use this
+        license for your projects.
+      </p>
+      
+      <p class="aboutText">
+        Personally, I chose this license because I worry about the ways
+        freely-available, open source software can be exploited by corporations
+        and organisations inflicting demonstrable harm on people and the planet.
+      </p>
+        
+      <p class="aboutText">
+        Specifically, I do not want
+        to find, months down the line, that this silly, playful game I made has
+        somehow ended up being used as, say, a team-building exercise by a
+        company like Nestlé known for
+        <a class="aboutLink" href="https://www.theguardian.com/global-development/2021/feb/12/mars-nestle-and-hershey-to-face-landmark-child-slavery-lawsuit-in-us">exploiting
+        child- and forced-labour</a>
+        <a class="aboutLink" href="https://www.ethicalconsumer.org/company-profile/nestle-sa">(among
+        - many - other things)</a>. Or by the military. Or the
+        <a class="aboutLink" href="https://abolitionistfutures.com/why-abolition">police</a>.
+      </p>
+      
+      <p class="aboutText">
+        These may be unlikely scenarios, and it's entirely possible that nobody
+        is going to play this game anyway. But as much as I possibly can, I
+        would like to avoid adding to or perpetuating oppression and suffering,
+        even indirectly.
+      </p>
+      
+      <h2 id="thanks">Thanks</h2>
+      
+      <p class="aboutText">
+        This game was born out of the conversations we've had, and the games
+        we've played, over the last year or so at
+        <a class="aboutLink" href="https://www.biomecollective.com/">Biome
+        Collective</a>. I am indebted to everyone who's taken part in our
+        weekly sharings and (sometimes sporadic) games nights. I am incredibly
+        grateful to everyone at Biome.
+      </p>
+      
+      <h2 id="infrastructure-credits">Infrastructure Credits</h2>
+      
+      <p class="aboutText">
+        Telemaphoneroo is built on the following platforms, frameworks, 
+        libraries, and fonts:
+      </p>
+      
+      <ul>
+        <li class="aboutText2"><a class="aboutLink" href="https://glitch.com/">Glitch</a> - The web hosting platform the game runs on.</li>
+        <li class="aboutText2"><a class="aboutLink" href="https://nodejs.org/en/">Node.js</a> - Javascript runtime running on glitch.</li>
+        <li class="aboutText2"><a class="aboutLink" href="https://www.fastify.io/">Fastify</a> - Web framework to serve pages from glitch.</li>
+        <li class="aboutText2"><a class="aboutLink" href="https://github.com/fastify/fastify-formbody">fastify-formbody</a> - Fastify plugin to handle HTML forms.</li>
+        <li class="aboutText2"><a class="aboutLink" href="https://github.com/fastify/fastify-static">fastify-static</a> - Fastify plugin to serve static pages.</li>
+        <li class="aboutText2"><a class="aboutLink" href="https://handlebarsjs.com/">Handlebars</a> - Web page template engine.</li>
+        <li class="aboutText2"><a class="aboutLink" href="https://github.com/fastify/point-of-view">point-of-view</a> - Fastify plugin to support template engines like Handlebars.</li>
+        <li class="aboutText2"><a class="aboutLink" href="https://socket.io/">Socket.IO</a> - Web networking library.</li>
+        <li class="aboutText2"><a class="aboutLink" href="https://twemoji.twitter.com/">Twemoji</a> - Cross-platform emoji support.</li>
+        <li class="aboutText2"><a class="aboutLink" href="https://emoji-button.js.org/">Emoji Button</a> - Javascript emoji selector widget.</li>
+        <li class="aboutText2"><a class="aboutLink" href="https://fonts.google.com/specimen/Fredoka+One">Fredoka One</a> - Main font.</li>
+        <li class="aboutText2"><a class="aboutLink" href="https://fonts.google.com/specimen/Open+Sans">Open Sans</a> - About page font.</li>
+      </ul>
+      
+      <p class="aboutText">
+        (also, the main (light mode) background gradient is taken directly from
+        the first example on this
+        <a class="aboutLink" href="https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient()">MDN
+        page</a>, which I originally used as a placeholder, but ended
+        up liking so much that I kept it)
+      </p>
+      
+      <p>
+        <br/>Niall Moody, 2021.
+      </p>
+    </div>
+  </body>
+</html>

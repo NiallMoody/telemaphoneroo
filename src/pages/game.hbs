@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Telemaphoneroo</title>
+
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" type="image/png" href="https://cdn.glitch.com/639fce1b-57d3-4675-8e3a-cb10087ab54e%2Ffavicon.png?v=1623430902268">
+  </head>
+  
+  <script>
+    const room = "{{room}}";
+    const playerName = "{{playerName}}";
+  </script>
+  
+  <script src="https://cdn.socket.io/4.1.1/socket.io.min.js" integrity="sha384-cdrFIqe3RasCMNE0jeFG9xJHog/tgOVC1E9Lzve8LQN1g5WUHo0Kvk1mawWjxX7a" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script type="module" src="/settings-buttons.js"></script>
+  <script type="module" src="/client.js"></script>
+
+  <body>
+    <div id="mainDiv" class="main">
+      <div id="headerDiv">
+        <h1>Telemaphoneroo</h1>
+
+        <div id="settingsDiv">
+          <button class="settingsButton" id="darkModeButton" aria-label="switch between dark mode and light mode" title="Switch to dark mode">
+            🌞
+          </button>
+
+          <button class="settingsButton" id="muteText2Speech" aria-label="mute or unmute text-to-speech" title="Mute game speech">
+            🔊
+          </button>
+        </div>
+      </div>
+      
+      <h2 id="roomTitle">
+        {{room}}'s Room
+      </h2>
+      
+      <div id="roomURLDiv" style="display:none">
+        <p>
+          Send this URL to your friends to invite other players:
+        </p>
+        <input type="text" readonly="true" id="urlTextBox" value="https://telemaphoneroo.glitch.me/game?room={{room}}">
+        <button class="button" id="urlCopyButton">
+          Copy
+        </button>
+      </div>
+
+      <div id="nameDiv">
+        <p>
+          Enter your name:
+        </p>
+        <input type="text" id="nameTextBox">
+        <button class="button" id="nameButton">
+          Set name
+        </button>
+      </div>
+      
+      <div id="playerListDiv" style="display:none">
+        <h2>Players:</h2>
+
+        <ul id="playerList">
+          
+        </ul>
+      </div>
+      
+      <div id="gameStartDiv" style="display:none">
+        <button class="button" id="startGameButton">
+          Start game
+        </button>
+      </div>
+      
+      <div id="sentenceEnterDiv" style="display:none">
+        <p id="sentencePrompt">
+          
+        </p>
+        <input type="text" id="sentenceTextBox">
+        <button class="button" id="emojiButton" arial-label="button to bring up the emoji selector" title="Emoji selector">
+          😃
+        </button>
+        <button class="button" id="sentenceButton">
+          Send phrase
+        </button>
+      </div>
+      
+      <div id="waitingDiv" style="display:none">
+        <p id="waitingText">
+          
+        </p>
+      </div>
+      
+      <div id="finalSentences" style="display:none">
+      </div>
+      
+      <div id="nextSentenceDiv" style="display:none">
+        <button class="button" id="nextSentenceButton">
+          Next sentence
+        </button>
+      </div>
+    </div>
+      
+      <footer>
+        Made by <a href="https://www.niallmoody.com/" target="_blank" rel="noopener noreferrer">Niall Moody</a><br/>
+        Licensed under the <a href="https://telemaphoneroo.glitch.me/about#the-license" target="_blank" rel="noopener noreferrer">Anti-Capitalist Software License</a>
+      </footer>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Telemaphoneroo</title>
+
+    <link rel="stylesheet" href="/style.css" />  
+    <link rel="icon" type="image/png" href="https://cdn.glitch.com/639fce1b-57d3-4675-8e3a-cb10087ab54e%2Ffavicon.png?v=1623430902268">
+  </head>
+  
+  <script>
+    const errorMessage = "{{errorMessage}}";
+  </script>
+  
+  <script src="https://cdn.socket.io/4.1.1/socket.io.min.js" integrity="sha384-cdrFIqe3RasCMNE0jeFG9xJHog/tgOVC1E9Lzve8LQN1g5WUHo0Kvk1mawWjxX7a" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script type="module" src="/settings-buttons.js"></script>
+  <script src="/host-game.js"></script>
+
+  <body>
+    <div class="main">
+      <div id="headerDiv">
+        <h1>Telemaphoneroo</h1>
+
+        <div id="settingsDiv">
+          <button class="settingsButton" id="darkModeButton" aria-label="switch between dark mode and light mode" title="Switch to dark mode">
+            🌞
+          </button>
+
+          <button class="settingsButton" id="muteText2Speech" aria-label="mute or unmute text-to-speech" title="Mute game speech">
+            🔊
+          </button>
+        </div>
+      </div>
+
+      <div id="hostGameDiv">
+        <form method="post">
+          <p>
+            Enter your name to host a game:
+          </p>
+          <input type="text" name="hostName" id="nameTextBox">
+          <button class="button" id="nameButton">
+            Host game
+          </button>
+          
+          <details>
+            <summary>Custom Settings</summary>
+            <label for="numTimes" title="The number of times the game will cycle through all players.
+Useful if you only have a small number of players and want to
+extend the game.">Number of rounds: </label>
+            <select name="numTimes" id="numTimes" title="The number of times the game will cycle through all players.
+Useful if you only have a small number of players and want to
+extend the game.">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+            
+            <br/>
+            
+            <label for="firstPrompt" title="This is the first prompt players will see when the game starts.">First prompt: </label>
+            <input type="text" name="firstPrompt" id="firstPrompt" value="Enter a two-word phrase:" title="This is the first prompt players will see when the game starts.">
+            
+            <br/>
+            
+            <label for="nextPrompts" title="This is the prompt players will see for every round after the first round.">Next prompts: </label>
+            <input type="text" name="nextPrompts" id="nextPrompts" value="Add one syllable to the phrase:" title="This is the prompt players will see for every round after the first one.">
+            
+            <br/>
+            
+            <label class="checkbox" for="hidePrevious" title="If checked, players don't see the sentences they are responding to.
+Their input will be added to the end of the previous players' text.">Hide previous input:
+              <input type="checkbox" name="hidePrevious" id="hidePrevious">
+              <span class="checkmark">X</span>
+            </label>
+            
+            <label for="maxTime" title="This is the number of minutes to wait before timing-out non-responsive players.">Max time per turn (minutes):</label>
+            <input type="number" name="maxTime" id="maxTime" value="3" title="This is the number of minutes to wait before timing-out non-responsive players." onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+          </details>
+        </form>
+        
+        <p>
+          <a href="/about">About this game</a>
+        </p>
+      </div>
+    </div>
+      
+      <footer>
+        Made by <a href="https://www.niallmoody.com/" target="_blank" rel="noopener noreferrer">Niall Moody</a><br/>
+        Licensed under the <a href="https://telemaphoneroo.glitch.me/about#the-license" target="_blank" rel="noopener noreferrer">Anti-Capitalist Software License</a>
+      </footer>
+  </body>
+</html>
