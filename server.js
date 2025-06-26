@@ -631,7 +631,6 @@ fastify.post('/', (request, reply) => {
 
 //------------------------------------------------------------------------------
 // Run the server and report out to the logs
-console.log(`port = ${port}`);
 fastify.listen({ port: port, host: '0.0.0.0' }, (err, address) => {
 
   if(err) {
