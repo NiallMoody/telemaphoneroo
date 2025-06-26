@@ -632,7 +632,7 @@ fastify.post('/', (request, reply) => {
 //------------------------------------------------------------------------------
 // Run the server and report out to the logs
 console.log(`port = ${port}`);
-fastify.listen(port, (err, address) => {
+fastify.listen({ port: port }, (err, address) => {
 
   if(err) {
     fastify.log.error(err);
