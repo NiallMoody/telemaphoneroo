@@ -211,6 +211,8 @@ function setupSocket() {
     roomTitle.innerHTML = room + '\'s Room (turn: 1/' + numTurns + ')';
     ++turn;
 
+	sentenceTextBox.focus();
+
     if(!mute) {
       let robotVoice = new SpeechSynthesisUtterance();
       robotVoice.text = sentencePrompt.innerHTML;
@@ -282,6 +284,8 @@ function setupSocket() {
     
     roomTitle.innerHTML = room + '\'s Room (turn: ' + turn + '/' + numTurns + ')';
     ++turn;
+
+	sentenceTextBox.focus();
 
     if(!mute) {
       let robotVoice = new SpeechSynthesisUtterance();
