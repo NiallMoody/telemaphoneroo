@@ -49,7 +49,7 @@ window.addEventListener('load', (event) => {
     setName(nameTextBox.value);
   });
   nameTextBox.addEventListener('keyup', (event) => {
-    if(event.keyCode == 13) {
+    if(event.key == 'Enter') {
       setName(nameTextBox.value);
     }
   });

@@ -593,7 +593,10 @@ fastify.post('/', (request, reply) => {
      ('nextPrompts' in request.body) &&
      ('maxTime' in request.body)) {
     let params = { room: request.body.hostName,
-                   playerName: request.body.hostName };
+                   playerName: request.body.hostName,
+				   url: (request.protocol + "://" + request.headers.host + "/game")};
+
+    console.log(params.url);
 
     console.log('Received a POST request to host a game, with the name: <' +
                 request.body.hostName + '>');
